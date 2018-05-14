@@ -29,7 +29,7 @@ export class AppComponent {
     this.fileToUpload = files.item(0);
     if (this.fileToUpload != null) {
       this._uploadRoom.postFile(this.fileToUpload).subscribe((data: any) => {
-        this.loading = false;
+        // this.loading = false;
         if (data.IsSuccess) {
           this.roomImgUrl = data.SuperimposeImageUrl;
         } else {
@@ -39,5 +39,8 @@ export class AppComponent {
         console.log(error);
       });
     }
+  }
+  onLoaded() {
+    this.loading = false;
   }
 }
