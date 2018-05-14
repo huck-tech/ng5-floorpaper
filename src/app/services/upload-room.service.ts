@@ -15,10 +15,9 @@ export class UploadRoomService {
     const formData: FormData = new FormData();
     formData.append('file', fileToUpload, fileToUpload.name);
     formData.append('partner', environment.PARTNER_ID);
-    console.log(fileToUpload);
     return this.httpClient
       .post(endpoint, formData)
-      .map((res) => res)
-      .catch((e) => console.error('An error occurred:', e.error));
+      .map((res: any) => res)
+      .catch((e: any) => Observable.throw(e.statusText));
 }
 }

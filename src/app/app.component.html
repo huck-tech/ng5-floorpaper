@@ -27,5 +27,9 @@
       </div>
     </div>
   </div>
-  <div></div>
+  <div
+    class="loading-overlay d-flex position-absolute justify-content-center align-items-center"
+    *ngIf="loading">
+    <img src="../assets/ic-spin.png" class="loader" alt="">
+  </div>
 </div>

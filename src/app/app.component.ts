@@ -15,6 +15,7 @@ export class AppComponent {
   plankWidth: Number;
   partnerId: String;
   fileToUpload: File = null;
+  loading: Boolean = false;
   constructor(public _uploadRoom: UploadRoomService) {
     this.logoUrl = environment.LOGO_URL;
     this.roomImgUrl = environment.ROOM_IMG_URL;
@@ -24,11 +25,15 @@ export class AppComponent {
     this.partnerId = environment.PARTNER_ID;
   }
   handleFileInput(files: FileList) {
+    this.loading = true;
     this.fileToUpload = files.item(0);
     if (this.fileToUpload != null) {
       this._uploadRoom.postFile(this.fileToUpload).subscribe((data: any) => {
+        this.loading = false;
         if (data.IsSuccess) {
           this.roomImgUrl = data.SuperimposeImageUrl;
+        } else {
+          alert('--invalid process --');
         }
       }, error => {
         console.log(error);
