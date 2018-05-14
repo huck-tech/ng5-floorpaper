@@ -1,20 +1,31 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container pb-4">
+  <div class="row d-flex justify-content-center py-4">
+    <div class="col-8">
+      <img class="img-fluid" [src]="logoUrl">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 mt-3">
+      <img [src]="roomImgUrl" class="w-100"/>
+    </div>
+    <div class="col-sm-4 mt-3">
+      <div class="row">
+        <div class="col-5 col-sm-12"><img [src]="plankImgUrl" class="img-fluid w-100"></div>
+        <div class="col-7 col-sm-12">
+          <h2 class="plank-name pt-3">{{plankName}}</h2>
+          <h3 class="plank-name pb-3">Plank Width: {{plankWidth}}"</h3>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12">
+            <label for="file-upload" class="upload-btn w-100 py-2 text-center">
+                <i class="fas fa-plus"></i> UPLOAD ROOM PHOTO
+            </label>
+            <input id="file-upload" type="file" (change)="handleFileInput($event.target.files)"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div></div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-

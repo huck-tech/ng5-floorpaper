@@ -4,5 +4,12 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  LOGO_URL: '../assets/img-logo.png',
+  ROOM_IMG_URL: '../assets/img-room-default.jpg',
+  PLANK_IMG_URL: '../assets/img-plank.jpg',
+  PLANK_NAME: 'Copper Ridge',
+  PLANK_WIDTH: 5,
+  PARTNER_ID: 'CBM',
+  UPLOAD_API_URL: 'https://floorpaper.azurewebsites.net/api/upload'
 };
