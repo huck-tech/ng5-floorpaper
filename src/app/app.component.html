@@ -1,15 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container pb-4">
-  <div class="row d-flex justify-content-center py-4">
+  <div class="row d-flex justify-content-center logo-view">
     <div class="col-8">
       <img class="img-fluid" [src]="logoUrl">
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-8 mt-3">
+    <div class="col-sm-8">
       <img [(src)]="roomImgUrl" class="w-100" (load)="onLoaded()"/>
     </div>
-    <div class="col-sm-4 mt-3">
+    <div class="col-sm-4 plank-view">
       <div class="row">
         <div class="col-5 col-sm-12"><img [src]="plankImgUrl" class="img-fluid w-100"></div>
         <div class="col-7 col-sm-12">
@@ -28,7 +28,7 @@
     </div>
   </div>
   <div
-    class="loading-overlay d-flex position-absolute justify-content-center align-items-center"
+    class="loading-overlay d-flex position-fixed justify-content-center align-items-center"
     *ngIf="loading">
     <img src="../assets/ic-spin.png" class="loader" alt="">
   </div>

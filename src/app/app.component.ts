@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { environment } from '../environments/environment';
 import { UploadRoomService } from './services/upload-room.service';
+import { NgSpinKitModule } from 'ng-spin-kit';
 
 @Component({
   selector: 'app-root',

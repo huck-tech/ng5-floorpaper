@@ -8,6 +8,9 @@
     font-size: 1em; 
   }
 }
+.logo-view {
+  padding: 16px 0;
+}
 .upload-btn {
   color: #000;
   font: normal normal normal 1em/1em lulo-clean-w01-one-bold,sans-serif;
@@ -30,6 +33,16 @@ input[type="file"] {
 @media (min-width: 1200px) {
   .container {
     max-width: 979px;
+  }
+}
+@media (max-width: 576px) {
+  .plank-view {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .logo-view {
+    padding: 8px 0;
   }
 }
 @keyframes fullRotate {
