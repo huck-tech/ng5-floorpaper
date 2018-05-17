@@ -9,7 +9,12 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        { "glob": "jquery.slim.min.js", "input": "../node_modules/jquery/dist/", "output": "./" },
+        { "glob": "jquery.min.js", "input": "../node_modules/jquery/dist/", "output": "./" },
+        { "glob": "shim.min.js", "input": "../node_modules/core-js/client/", "output": "./" },
+        { "glob": "bowser.min.js", "input": "../node_modules/bowser/", "output": "./" },
+        "browser-test.js"
       ],
       "index": "index.html",
       "main": "main.ts",

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { environment } from '../environments/environment';
 import { UploadRoomService } from './services/upload-room.service';
-import { NgSpinKitModule } from 'ng-spin-kit';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +16,8 @@ export class AppComponent {
   partnerId: String;
   fileToUpload: File = null;
   loading: Boolean = false;
+  deviceInfo: any = null;
+  detailLink: string;
   constructor(public _uploadRoom: UploadRoomService) {
     this.logoUrl = environment.LOGO_URL;
     this.roomImgUrl = environment.ROOM_IMG_URL;
@@ -24,6 +25,7 @@ export class AppComponent {
     this.plankName = environment.PLANK_NAME;
     this.plankWidth = environment.PLANK_WIDTH;
     this.partnerId = environment.PARTNER_ID;
+    this.detailLink = environment.DETAIL_LINK;
   }
   handleFileInput(files: FileList) {
     this.loading = true;
@@ -43,5 +45,8 @@ export class AppComponent {
   }
   onLoaded() {
     this.loading = false;
+  }
+  gotoDetail() {
+    window.location.href = this.detailLink;
   }
 }

@@ -11,5 +11,6 @@ export const environment = {
   PLANK_NAME: 'Copper Ridge',
   PLANK_WIDTH: 5,
   PARTNER_ID: 'CBM',
-  UPLOAD_API_URL: 'https://floorpaper.azurewebsites.net/api/upload'
+  UPLOAD_API_URL: 'https://floorpaper.azurewebsites.net/api/upload',
+  DETAIL_LINK: 'https://www.google.com',
 };

@@ -2,14 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Ng5Floorpaper</title>
+  <title>Floorpaper</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    .error-page {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #fff;
+      padding-top: 4rem;
+    }
+    .error-page h1 {
+      font-size: 6em;
+    }
+    .error-page p {
+      max-width: 50vw;
+      text-align: center;
+    }
+    @media (max-width: 767px) {
+      .error-page h1 {
+        font-size: 4em;
+      }
+      .error-page p {
+        max-width: 80vw;
+        text-align: center;
+      }
+    }
+    .hide {
+      display: none;
+    }
+  </style>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <body>
-  <app-root></app-root>
+  <app-root id="app" class="hide"></app-root>
+  <div
+    id="error-app"
+    class="error-page container-fluid position-fixed hide">
+    <div class="row">
+      <div class="col-8 text-center mx-auto">
+        <img src="./assets/img-logo.png" class="img-fluid" alt="">
+        <p  id="error-app-message" class="mx-auto py-4">For optimal viewing experience, this page can only be viewed with Safari version 9 or higher. Please update your safari browser before viewing this page</p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="jquery.slim.min.js"></script>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="shim.min.js"></script>
+  <script type="text/javascript" src="bowser.min.js"></script>
+  <script type="text/javascript" src="browser-test.js"></script>
 </body>
 </html>
