@@ -52,4 +52,8 @@ export class AppComponent {
   gotoDetail() {
     window.location.href = this.detailLink;
   }
+  backHome() {
+    this.loading = false;
+    this.errorFlag = false;
+  }
 }
