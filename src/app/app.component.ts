@@ -18,6 +18,8 @@ export class AppComponent {
   loading: Boolean = false;
   deviceInfo: any = null;
   detailLink: string;
+  errorFlag: Boolean = false;
+  errorMsg: string;
   constructor(public _uploadRoom: UploadRoomService) {
     this.logoUrl = environment.LOGO_URL;
     this.roomImgUrl = environment.ROOM_IMG_URL;
@@ -36,7 +38,8 @@ export class AppComponent {
         if (data.IsSuccess) {
           this.roomImgUrl = data.SuperimposeImageUrl;
         } else {
-          alert('--invalid process --');
+          this.errorFlag = true;
+          this.errorMsg = data.ErrorMessage;
         }
       }, error => {
         console.log(error);

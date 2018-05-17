@@ -43,4 +43,15 @@
     *ngIf="loading">
     <img src="../assets/ic-spin.png" class="loader" alt="">
   </div>
+  <div
+    class="api-error d-flex container-fluid position-fixed justify-content-center align-items-center"
+    *ngIf="errorFlag">
+    <div class="row">
+      <div class="col-8 text-center mx-auto">
+        <img src="./assets/img-logo.png" class="img-fluid" alt="">
+        <p  id="error-app-message" class="mx-auto py-4">{{errorMsg}}</p>
+      </div>
+    </div>
+  </div>
+  
 </div>
